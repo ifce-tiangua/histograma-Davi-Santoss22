@@ -42,6 +42,10 @@ int main()
     }
 
     imprimir_histograma(histograma, valores, categorias);
+
+    for (int i = 0; i < categorias; i++){
+        if(histograma[i] != NULL) free(histograma[i]);
+    }
   
     return 0;
 }
