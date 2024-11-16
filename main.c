@@ -19,8 +19,11 @@ void imprimir_histograma (char* h[], int valores[], int categorias){
     for(int j = 0; j < valores[i]; j++){
       printf("*"); //asteristicos
     }
-    printf("\\n");
+    if (i != categorias - 1) {
+        printf("\\n");
+    }
   }
+  
 }
 
 int main()
