@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void povoa_histograma (char* h[], int valor, int categoria){
-  //povoa com * a categoria correspondente com o seu respectivo valor
-  for(int i = 0; i < valor; i++){
-    h[categoria][i] = '*';
-  }
-}
-
 void imprimir_histograma (char* h[], int valores[], int categorias){
   if(categorias == 0){
     printf("%d", 0);
@@ -17,7 +10,7 @@ void imprimir_histograma (char* h[], int valores[], int categorias){
   for(int i = 0; i < categorias; i++){
     printf("%d ", valores[i]); //quantidade
     for(int j = 0; j < valores[i]; j++){
-      printf("%c", h[i][j]); //asteristicos
+      printf("*"); //asteristicos
     }
     printf("\n");
   }
@@ -37,7 +30,6 @@ int main()
         if(valores[i] == 0) histograma[i] = NULL;
         else
             histograma[i] = (char *) malloc (valores[i] * sizeof(char));
-            povoa_histograma(histograma, valores[i], i);
     }
 
     imprimir_histograma(histograma, valores, categorias);
