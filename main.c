@@ -15,10 +15,9 @@ void imprimir_histograma (char* h[], int valores[], int categorias){
   
   //imprime o histograma
   for(int i = 0; i < categorias; i++){
-    printf("%d ", valores[i]);
+    printf("%d ", valores[i]); //quantidade
     for(int j = 0; j < valores[i]; j++){
-      printf("%c", h[i][j]);
-      
+      printf("%c", h[i][j]); //asteristicos
     }
     printf("\n");
   }
@@ -44,7 +43,8 @@ int main()
     imprimir_histograma(histograma, valores, categorias);
 
     for (int i = 0; i < categorias; i++){
-        if(histograma[i] != NULL) free(histograma[i]);
+        if(histograma[i] != NULL) 
+          free(histograma[i]);
     }
   
     return 0;
