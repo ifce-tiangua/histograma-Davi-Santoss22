@@ -10,7 +10,7 @@ void povoa_histograma (char* h[], int valor, int categoria){
 
 void imprimir_histograma (char* h[], int valores[], int categorias){
   if(categorias == 0){
-    printf("%d", 0);
+    printf("vazio");
   }
   
   //imprime o histograma
