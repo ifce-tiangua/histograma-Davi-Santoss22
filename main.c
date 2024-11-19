@@ -20,7 +20,7 @@ void imprimir_histograma (char* h[], int valores[], int categorias){
       printf("*"); //asteristicos
     }
     if (i != categorias - 1) {
-        printf("\\n");
+        printf("\n");
     }
   }
   
